@@ -1,0 +1,24 @@
+"Question":
+  "You lost your memory":
+    "label": "You lost your memory"
+    "quest": "Accept UFO Challenge?"
+    "Si": "Accept the challenge"
+    "No": "Reject the challenge"
+    "Rejected": "You rejected the challenge"
+  "Accept the challenge":
+    "label": "You accepted the challenge"
+    "quest": "Are you going up to the captains bridge?"
+    "Si": "Go up on the bridge"
+    "No": "Refuse to go up to the bridge"
+    "rejected": "You didn't attend the negotiations"
+  "Go up on the bridge":
+    "label": "You've gone up to the bridge"
+    "quest": "who are you?"
+    "Si": "Tell the truth about yourself"
+    "No": "Lie about yourself"
+    "rejected": "Your lie has been revealed"
+  "Tell the truth about yourself":
+    "label": "You've returned home"
+    "quest": "Victory!"
+    "Si": null
+    "No": null
