@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76b855e-4eb8-4ece-a628-e4eb2ae83213" name="Changes" comment="Creation of first servlet and landing page">
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/module3/models/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/module3/repository/QuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/module3/services/QuestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Question.yaml" afterDir="false" />
+    <list default="true" id="d76b855e-4eb8-4ece-a628-e4eb2ae83213" name="Changes" comment="Add functionality and quest logic.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/codegym/module3/repository/QuestionRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/codegym/module3/services/QuestionServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/codegym/module3/servlets/ServletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codegym/module3/servlets/ServletController.java" afterDir="false" />
@@ -32,6 +31,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,6 +56,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.QuestionRepositoryTest.getQuestion.executor": "Coverage",
+    "JUnit.QuestionServiceTest.getNextQuestion.executor": "Debug",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.Module3-QuestionsGame [clean].executor": "Run",
     "Maven.Module3-QuestionsGame [compile].executor": "Run",
@@ -64,8 +66,9 @@
     "Maven.Module3-QuestionsGame [validate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 9.0.84.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -78,7 +81,49 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="codegym.module3.repository" />
+      <recent name="codegym.module3.services" />
+      <recent name="codegym.module3.servlets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.QuestionServiceTest.getNextQuestion">
+    <configuration name="QuestionRepositoryTest.getQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module3-QuestionsGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codegym.module3.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codegym.module3.repository" />
+      <option name="MAIN_CLASS_NAME" value="codegym.module3.repository.QuestionRepositoryTest" />
+      <option name="METHOD_NAME" value="getQuestion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionServiceTest.getNextQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module3-QuestionsGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codegym.module3.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codegym.module3.services" />
+      <option name="MAIN_CLASS_NAME" value="codegym.module3.services.QuestionServiceTest" />
+      <option name="METHOD_NAME" value="getNextQuestion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.84" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.84" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -167,6 +212,12 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.QuestionServiceTest.getNextQuestion" />
+        <item itemvalue="JUnit.QuestionRepositoryTest.getQuestion" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -187,7 +238,11 @@
       <workItem from="1709187568631" duration="64000" />
       <workItem from="1709220707940" duration="5138000" />
       <workItem from="1709423734762" duration="1853000" />
-      <workItem from="1709444105781" duration="15708000" />
+      <workItem from="1709444105781" duration="15909000" />
+      <workItem from="1709498038877" duration="5311000" />
+      <workItem from="1709569480218" duration="1533000" />
+      <workItem from="1709613627075" duration="1724000" />
+      <workItem from="1709653694985" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of first servlet and landing page">
       <option name="closed" value="true" />
@@ -197,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709187613120</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add functionality and quest logic.">
+      <option name="closed" value="true" />
+      <created>1709462792239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709462792239</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add functionality and quest logic.">
+      <option name="closed" value="true" />
+      <created>1709462819619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709462819619</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +276,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creation of first servlet and landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation of first servlet and landing page" />
+    <MESSAGE value="Add functionality and quest logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality and quest logic." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Module3_QuestionsGame$QuestionRepositoryTest_getQuestion.ic" NAME="QuestionRepositoryTest.getQuestion Coverage Results" MODIFIED="1709655111131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>codegym.module3.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Module3_QuestionsGame$QuestionServiceTest_getNextQuestion.ic" NAME="QuestionServiceTest.getNextQuestion Coverage Results" MODIFIED="1709654790138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>codegym.module3.services.*</FILTER>
+    </SUITE>
   </component>
 </project>

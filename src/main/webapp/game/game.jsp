@@ -1,5 +1,7 @@
 <%@ page import="codegym.module3.models.Question" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.util.logging.Logger" %>
+<%@ page import="org.slf4j.LoggerFactory" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -7,6 +9,7 @@
 </head>
 <body>
 <%
+
     if(request.getParameter("NameValue") != null){
         session.setAttribute("NameValue", request.getParameter("NameValue"));
     }
@@ -41,9 +44,10 @@
     } else { %>
 <h2><%= question.getLabel()%></h2>
 <h2><%= question.getQuest()%></h2>
+
 <% request.removeAttribute("nextQuestion");%>
 <form action="index.jsp">
-    <input type="submit" value="Restart" />
+    <input type="submit" value="Intentarlo de nuevo" />
 </form>
         <%
     }
